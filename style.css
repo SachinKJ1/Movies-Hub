@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+}body{
+  position: relative;
+  background-color: rgb(233, 236, 239);
+}::-webkit-scrollbar{
+  width: 10px;
+  background-color: transparent;
+  display: none;
+
+}
+::-webkit-scrollbar-thumb{
+  background-color: red;
+}
+::-webkit-scrollbar-track{
+  background-color: transparent;
+}
+.Main_logo {
+  width: 4rem;
+}
+.Logo_title {
+  /* background-color: green; */
+
+  color: yellow;
+  font-size: x-large;
+  font-family: "Alkatra", cursive;
+}
+nav {
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 1rem;
+  padding-left: 2rem;
+  justify-content: space-between;
+}
+.nav_main_links {
+  text-decoration: none;
+  color: white;
+  font-family: "Alkatra", cursive;
+}.Menu_items_ul-list{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+}.Menu_Btn_with_ul_list{
+  display: none;
+  list-style: none;
+  text-align: center;
+  position: relative;
+}.Menu_BTN{
+  position: absolute;
+  top: -1.7rem;
+}
+.Menu_tab{
+  background-color: rgb(95, 100, 95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 3rem;
+  z-index: 10;
+  background-image: linear-gradient(to left,rgb(223, 220, 220),grey);
+  display: none;
+}
+.movies_unit_text {
+  text-align: justify;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.movies_unit_title {
+  height: 5rem;
+  /* background-color: green; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.movies_unit_image {
+  max-height: 500px;
+}
+/* Movie_Details */
+.Movie_poster {
+  /* width: 40%; */
+  padding: 3rem;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  
+}
+.Movie_Details {
+  /* background-color: green; */
+  /* min-width: 60%; */
+  padding: 2rem;
+}.Release_informations{
+  display: flex;
+  justify-content: space-around;
+}
+.Ratings {
+  width: 13rem;
+  text-align: center;
+  /* background-color: yellow; */
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Gener_Style {
+  /* border: 1px solid; */
+  border-radius: 10px;
+  width: 5rem;
+  padding: 5px;
+  /* margin: 10px; */
+  background-color: black;
+  color: white;
+  font-size: 0.8rem;
+  margin: 2px;
+}.Release_Details{
+  display: flex;
+  justify-content: space-around;
+}
+.Poster_image{
+  width: 375px;
+  height: auto;
+  border-radius: 25px;
+}.Pages_display{
+  width: 100%;
+  /* text-align: center; */
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5rem;
+ }.overlay{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 10;
+  display: none;
+}
+ #Selected_Movie_Details{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(234, 230, 224); 
+  z-index: 10;
+  height: 100vh;
+  width: 100%;
+  display: none;
+  overflow: auto;
+}.close_btn_for_movie{
+  position: relative;
+}
+.Close_selected_movie{
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+}.Input_list{
+  width: 15rem;
+  margin-right: 2rem;
+  
+}.view_Details_button{
+  width: 70%;
+}.Movies_unit_card{
+  box-shadow: 2px 2px 2px rgb(204, 204, 204);
+}.PolicyLinks{
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 1rem;
+  color: white;
+  font-weight: bolder;
+}.PolicyLinks:hover{
+  color: orange
+}.SocialLinks{
+  text-decoration: none;
+  font-size: 3rem;
+  display: inline-block;
+  margin-right: 2rem; 
+  color: white;
+}.SocialLinks:hover{
+  color: rgb(62, 152, 212);
+}.appdownbtn{
+  width: 11rem;
+}.footer_class{
+  background-color: rgb(179, 183, 183);
+}.Pagination_btn{
+width: 10rem;
+color: green;
+}.Pagination_btn:hover{
+background-color: green;
+color: white;
+}.close_menu_btn{
+  position: absolute;
+  top: 0rem;
+  right: 0rem
+}
+@media(max-width:1300px){
+  .Poster_image{
+    width: 337px;
+    height: 472px;
+  }.Close_selected_movie{
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+  }
+}
+@media(max-width: 900px){
+  .Menu_items_ul-list{
+    display: none;
+  }.Menu_Btn_with_ul_list{
+    display: flex;
+    justify-content: start;
+
+  }.Menu_BTN{
+    width: 5rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    background-color: brown;
+  }
+}@media(max-width:700px){
+  .Release_informations{
+    display: block;
+  }.Release_sub_informations{
+    margin: 1rem auto;
+  }
+}@media(max-width:500px) {
+  .Movie_poster {
+    /* width: 40%; */
+    padding: 4rem 2rem 2rem 2rem;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    
+  }
+}
+@media(max-width:400px) {
+  .Input_list{
+    width: 12rem;
+  }
+}

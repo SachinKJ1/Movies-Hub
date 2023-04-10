@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movies Hub</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="Overlay" class="overlay bg-warning">
+      <div id="Selected_Movie_Details">
+        <!--  <div>
+        <h2>MOVIE</h2>
+
+        <div class="d-flex w-100">
+          <div class="Movie_poster">
+            <img src="./images/icon_image-removebg-preview.png" alt="" />
+          </div>
+          <div class="Movie_Details">
+            <div class="d-flex justify-content-between px-5">
+              <div  class="Ratings">
+                <span>2023</span><span class="align-text-top">.</span>
+                <span>R</span>. <span>2h49m</span>
+              </div>
+              <div  class="Ratings">Languages</div>
+              <div  class="Ratings">Geners</div>
+            </div>
+            <div class="d-flex justify-content-between px-5">
+              <div class="Ratings">
+                <div>IMDb RATING</div>
+                <div class="text-center">⭐</div>
+              </div>
+              <div class="Ratings">
+                <div>METACRITIC</div>
+                <div class="text-center">⭐</div>
+              </div>
+              <div class="Ratings">
+                <div>ROTTEN TOMATOES</div>
+                <div class="text-center">⭐</div>
+              </div>
+            </div>
+            <div>Actors:</div>
+            <div>Director :</div>
+            <div>Writers :</div>
+            <div>Awards :</div>
+          </div>
+        </div>
+        <p>
+        </p>
+      </div>
+       -->
+      </div>
+    </div>
+    <header class="section_top">
+      <nav class="bg-secondary align-items-center">
+        <ul class="list-unstyled Menu_items_ul-list">
+          <li>
+            <a href="" class="nav_main_links"
+              ><span class="Logo_title">MOVIES HUB</span></a
+            >
+          </li>
+          <li><a href="#popular" class="nav_main_links">Popular</a></li>
+          <li><a href="#now_playing" class="nav_main_links">Now Playing</a></li>
+          <li><a href="#top_rated" class="nav_main_links">Top Rated</a></li>
+          <li><a href="#upcoming" class="nav_main_links">Upcoming</a></li>
+        </ul>
+        <div class="Menu_Btn_with_ul_list">
+          <button id="Menu_BTN" class="Menu_BTN"><i class="bi bi-list"></i></button>
+        </div>
+        <ul class="list-unstyled">
+          <li class="d-flex Input_list">
+            <input
+              id="Search_movie_input"
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+            />
+            <button id="Search_movie_btn" class="btn btn-warning" type="submit">
+              Search
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container-fluid">
+      <div class="Menu_tab" id="Menu_tab">
+        <div class="close_btn_for_movie">
+          <button
+            id="close_menu_btn"
+            class="close_menu_btn btn btn-outline-danger"
+          >
+            X
+          </button>
+        </div>
+        <ul class="list-unstyled">
+          <li>
+            <a href="" class="nav_main_links"
+              ><span class="Logo_title">MOVIES HUB</span></a
+            >
+          </li>
+          <hr />
+          <li><a href="#popular" class="nav_main_links">Popular</a></li>
+          <hr />
+          <li><a href="#now_playing" class="nav_main_links">Now Playing</a></li>
+          <hr />
+          <li><a href="#top_rated" class="nav_main_links">Top Rated</a></li>
+          <hr />
+          <li><a href="#upcoming" class="nav_main_links">Upcoming</a></li>
+        </ul>
+      </div>
+      <div id="movie_unit" class="mt-5 row"></div>
+      <!--  <div class="card" style="width: 18rem;">
+            <img src="" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div> -->
+    </main>
+    <div id="Pages_load" class="Pages_display">
+      <!-- <div>
+        <ul class="pagination">
+          <li class="page-item"><button class="page-link">Previous</button></li>
+          <li class="page-item"><button class="page-link">1</button></li>
+          <li class="page-item"><button class="page-link">2</button></li>
+          <li class="page-item"><button class="page-link">3</button></li>
+          <li class="page-item"><button class="page-link">Next</button></li>
+        </ul>
+      </div> -->
+    </div>
+    <footer class="footer_class p-2">
+      <div class="container-fluid">
+        <div class="row mt-5">
+          <div class="col-lg-6">
+            <a class="PolicyLinks" href="">About Movies Hub</a>
+            <a class="PolicyLinks" href="">Terms of use</a>
+            <a class="PolicyLinks" href="">Privacy Policy</a>
+            <a class="PolicyLinks" href="">FAQ</a>
+            <a class="PolicyLinks" href="">Feedback</a>
+            <a class="PolicyLinks" href="">Careers</a>
+            <p class="">
+              © 2023 STAR. All Rights Reserved. HBO, Home Box Office and all
+              related channel and programming logos are service marks of, and
+              all related programming visuals and elements are the property of,
+              Home Box Office, Inc. All rights reserved.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-6">
+                <h5 class="">Connect with us</h5>
+
+                <a class="SocialLinks" href="#"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a class="SocialLinks" href="#"
+                  ><i class="bi bi-twitter"></i
+                ></a>
+              </div>
+              <div class="col-6">
+                <h5 class="">Movies Hub</h5>
+                <a
+                  href="https://play.google.com/store/apps/details?id=in.startv.hotstar"
+                  class="btn btn-dark appdownbtn"
+                  ><i class="bi bi-google-play"></i><span> GET IT ON</span>
+                  <br />
+                  <span>Google Play</span></a
+                >
+                <br /><br />
+                <a
+                  href="https://apps.apple.com/in/app/hotstar-live-cricket-movies/id934459219"
+                  class="btn btn-dark appdownbtn"
+                  ><i class="bi bi-apple"></i><span> Download on the</span>
+                  <br />
+                  <span>App Store</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    // https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=2dab3799e2817b6c7c4a7247f799984a
+    //  tmdb api key-   2dab3799e2817b6c7c4a7247f799984a  /discover/movie?sort_by=popularity.desc  https://api.themoviedb.org/3
+    // https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2015-6-3&api_key=DEMO_KEY
+    // https://api.themoviedb.org/3/movie/popular?api_key=2dab3799e2817b6c7c4a7247f799984a&language=en-US&page=1
+
+    const loadPages = function (pageNo, loadType) {
+      let page = "";
+      page = `
+      <div>
+      <ul class="pagination">
+        ${
+          +pageNo === 1
+            ? ""
+            : `<li class="page-item"><button class="page-link Pagination_btn" data-load="${loadType}" data-page="${
+                +pageNo - 1
+              }"><< Previous Page</button></li>`
+        }
+        
+        <li class="page-item"><button class="page-link Pagination_btn" data-load="${loadType}" data-page="${
+        +pageNo + 1
+      }">Next Page >></button></li>
+      </ul>
+    </div>`;
+      Pages_load.innerHTML = page;
+    };
+
+    const loadMovies = async function (loadContent = "popular", pageNo = 1) {
+      let loadType = loadContent;
+      let html = "";
+      // const pageNo = 1;
+      const data = await fetch(
+        `https://api.themoviedb.org/3/movie/${loadType}?api_key=2dab3799e2817b6c7c4a7247f799984a&language=en-US&page=${pageNo}`
+      );
+      const res = await data.json();
+      console.log(res.results);
+      res.results.forEach((res) => {
+        html += `
+        <div class = "col-xl-3 col-lg-4 col-sm-6 mt-4">
+          <div class="card  Movies_unit_card">
+            <img src="https://image.tmdb.org/t/p/w500${res.poster_path}" class="card-img-top movies_unit_image" alt="${res.title}">
+            <div class="card-body">
+              <div class = "movies_unit_title"><h3>${res.title}</h3></div>
+              <p class="card-text movies_unit_text">${res.overview}</p>
+              <div class="w-100 text-center"><button id="view_Details" class="btn btn-outline-success view_Details_button"data-overview="${res.overview}" data-content="${res.title}">Details</button></div>
+            </div>
+          </div>
+        </div>`;
+      });
+      Menu_tab.style.display = "none";
+      movie_unit.innerHTML = "";
+      Selected_Movie_Details.innerHTML = "";
+      movie_unit.innerHTML = html;
+      loadPages(pageNo, loadType);
+    };
+    loadMovies();
+
+    window.addEventListener("hashchange", function () {
+      const id = window.location.hash.slice(1);
+      loadMovies(id);
+    });
+
+    // pagination
+
+    Pages_load.addEventListener("click", function (e) {
+      if (e.target.classList.contains("page-link")) {
+        const { load } = e.target.dataset;
+        const { page } = e.target.dataset;
+        console.log(page, load);
+        loadMovies(load, page);
+        document
+          .querySelector(".section_top")
+          .scrollIntoView({ behavior: "smooth" });
+      }
+    });
+
+    const loadDetails = async function (content, overview = "") {
+      const data = await fetch(
+        `http://www.omdbapi.com/?apikey=61ace144&t=${content}`
+      );
+      const res = await data.json();
+      console.log(res);
+      let html = "";
+      html = ` <div>
+        <div class="close_btn_for_movie"><button class=" Close_selected_movie btn btn-outline-danger">X</button></div>
+          <div class="row flex-column-reverse flex-xl-row">
+           
+            <div class="Movie_Details col-xl-8">
+              <h2 class="text-center mb-5">${res.Title}</h2>
+              <div class="Release_informations">
+                <div  class="Ratings Release_sub_informations">
+                  <span class="">${res.Year}</span>&nbsp;&middot&nbsp;
+                  <span>${res.Rated}</span>&nbsp;&middot&nbsp;<span>${
+        res.Runtime
+      }</span>
+                </div>
+                <div  class="Ratings Release_sub_informations"><strong>Country</strong> : ${
+                  res.Country
+                } </div>
+                <div  class="Ratings Release_sub_informations">${res.Genre.split(",")
+                  .map((ing) => {
+                    return `<span class="Gener_Style">
+                  ${ing}
+                </span>`;
+                  })
+                  .join("")}</div>
+              </div>
+              <div class="d-flex justify-content-around">
+                ${res.Ratings.map((ing) => {
+                  return `
+                  <div class="Ratings">
+                  <div>
+                    <div><strong>${
+                      ing.Source === "Internet Movie Database"
+                        ? "IMDb"
+                        : ing.Source
+                    }</strong></div>
+                    <div class="text-center">${
+                      ing.Source === "Internet Movie Database"
+                        ? `⭐${ing.Value}`
+                        : ing.Value
+                    }</div>
+                  </div>
+                </div>`;
+                }).join("")}
+              </div>
+              <div class="Release_Details">
+                <div class="Ratings">
+                  <div>
+                    <div><strong>Release Date</strong></div>
+                    <div class="text-center">${
+                      res.Released === "N/A" ? "Not Available" : res.Released
+                    }</div>
+                  </div>
+                </div>
+                <div class="Ratings">
+                  <div>
+                    <div><strong>Box Office</strong></div>
+                    <div class="text-center">${
+                      res.BoxOffice === "N/A" ? "Not Available" : res.BoxOffice
+                    }</div>
+                  </div>
+                </div>
+                <div class="Ratings">
+                  <div>
+                    <div><strong>Production</strong></div>
+                    <div class="text-center">${
+                      res.Production === "N/A"
+                        ? "Not Available"
+                        : res.Production
+                    }</div>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div><strong>Actors</strong>: ${res.Actors}</div> <hr>
+              <div><strong>Director</strong> : ${res.Director}</div> <hr>
+              <div><strong>Writers</strong> : ${res.Writer}</div> <hr>
+              <div><strong>Awards</strong> : ${res.Awards}</div> <hr>
+              <div><strong>Languages</strong> : ${res.Language}</div> <hr>
+              <p style="text-align: justify"><strong>Plot</strong> : ${
+                overview === "" ? `${res.Plot}` : `${overview}`
+              }
+          </p>
+            </div>
+            <div class="Movie_poster col-xl-4">
+              <img class="Poster_image" src="${res.Poster}" alt="" />
+            </div>
+          </div>
+          
+        </div>`;
+      Overlay.style.display = "block";
+      Selected_Movie_Details.style.display = "block";
+      Selected_Movie_Details.innerHTML = html;
+    };
+    // const {content} = e.target.dataset;overview
+    movie_unit.addEventListener("click", function (e) {
+      if (e.target.classList.contains("view_Details_button")) {
+        const { content } = e.target.dataset;
+        const { overview } = e.target.dataset;
+        console.log(content, overview);
+        loadDetails(content, overview);
+      }
+    });
+    Selected_Movie_Details.addEventListener("click", function (e) {
+      if (e.target.classList.contains("Close_selected_movie")) {
+        Selected_Movie_Details.style.display = "none";
+        Overlay.style.display = "none";
+      }
+    });
+    // Search_movie_input.addEventListener('input',function(){
+    //   console.log('success');
+    // })
+    Search_movie_btn.addEventListener("click", function () {
+      let searchQuery = Search_movie_input.value;
+      // console.log(Search_movie_input.value);
+      loadDetails(searchQuery);
+    });
+    // Menu button
+    Menu_BTN.addEventListener("click", function () {
+      Menu_tab.style.display = "block";
+    });
+    close_menu_btn.addEventListener("click", function () {
+      Menu_tab.style.display = "none";
+    });
+  </script>
+</html>
